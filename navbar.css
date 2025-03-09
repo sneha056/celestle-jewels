@@ -1,0 +1,331 @@
+body{
+    max-width: 1514px;
+    overflow-x: hidden; 
+}
+/* responsiveness */
+@media (max-width: 991.98px) {
+    .main-menu, .search, .wish-cart {
+        display: none;
+    }
+    .logo{
+        height: 15px;
+    }
+
+    /* Show menu items, search bar, wishlist, and bag in a single column when active */
+    .main-menu.active, .search.active, .wish-cart.active {
+        display: block;
+        width: 100%;
+    }
+
+    /* Style the menu items to appear in a single column */
+    .main-menu.active ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-menu.active ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero-img1, .hero-img2, .hero-img3{
+        display: none !important;
+    }
+    .bannerrow{
+        padding: 0px !important;
+    }
+    .grid-container{
+        display: block !important;
+    }
+    .hbtn1{
+        padding: 0px !important;
+        text-align: center;
+    }
+    .hero-main .hero-title {
+        font-size: 10vh !important;
+    }
+    /* Style the search bar, wishlist, and bag to appear in a single column */
+    .search.active, .wish-cart.active {
+        margin: 10px 0;
+    }
+    #nav-search{
+        width: 50% !important;
+        margin-left: -30px;
+    }
+    .search{
+        text-align: center;
+    }
+    .wishlist{
+        display: block;
+        text-align: left;
+        margin-left: 55px;
+        width: 100%;
+    }
+    .wc-linkbag{
+        margin-right: 55px;
+    }
+    /* Style the toggle button */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0;
+    }
+    .fa-bars{
+        position: relative;
+        left:270px;
+    }
+
+    /* Change the hamburger icon to a cross (X) icon when the menu is active */
+    .menu-toggle.active i::before {
+        content: "\f00d"; /* Font Awesome cross (X) icon */
+    }
+    .main-menu ul li a::before , .wish-cart a::before {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    .main-menu ul li a::after , .wish-cart ul li a::after {
+        right: 0;
+        transform: translateX(100%);
+    }
+    .main-menu ul li:hover > a::before, .main-menu ul li:hover > a::after, .wish-cart:hover > a::before, .wish-cart:hover > a::after {
+        transform: translateX(0);
+    }
+
+    .main-menu ul li a::before, .main-menu ul li a::after , .wish-cart a::before, .wish-cart a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 2px;
+        background-color: #6c1447 ;
+        transition: all 0.3s ease;
+    }
+    .main-menu ul li a , .wish-cart a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.main-menu ul li a::before, .main-menu ul li a::after , .wish-cart a::before, .wish-cart a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #7d1550 ;
+    transition: all 0.3s ease;
+}
+.main-menu ul li a , .wish-cart a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 21px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.main-menu ul li:hover > a::before, .main-menu ul li:hover > a::after , .wish-cart:hover > a::before, .wish-cart:hover > a::after{
+    transform: translateX(0);
+}
+.sticky-active{
+    background-color:#f7e9cc;
+    
+}
+    #nav-search{
+
+        margin-top: 20px;
+    }
+#navbar{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100;
+}
+.wish-cart a:hover{
+    color: black;
+}
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    width: 3.1vh;
+    height: 2.3vh;
+}
+
+.main-menu a, .header-wc a{
+    color: black;
+}
+.menu-category .menu-list {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0.4vh 1.2vh rgb(0 0 0 / .1);
+    border-radius: 0.5vh;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20%);
+}
+.main-menu ul li a::before , .wish-cart a::before {
+    left: 0;
+    transform: translateX(-100%);
+}
+.main-menu ul li a::after , .wish-cart a::after{
+    right: 0;
+    transform: translateX(100%);
+}
+.main-menu ul li:hover > a::before, .main-menu ul li:hover > a::after ,.wish-cart a:hover > a::before, .wish-cart:hover > a::after  {
+    transform: translateX(0);
+}
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+.main-menu ul li:first-child {
+    margin-left: 0;
+}
+
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+.main-menu>ul>li {
+    margin: 0 2.4vh;
+}
+.main-menu ul.sub-menu {
+    padding: 1.8vh 2.0vh;
+    left: -2.7vh;
+}
+
+.main-menu ul.sub-menu {
+    position: absolute;
+    text-align: left;
+    top: 150%;
+    left: 0;
+    box-shadow: 0 0.5vh 1.0vh 0 rgb(0 0 0 / .1);
+    visibility: hidden;
+    min-width: 19vh;
+    width: max-content;
+    padding: 0.7vh;
+    left: -1.4vh;
+    margin-top: 0;
+    opacity: 0;
+    z-index: -1;
+    border-bottom: 0.3vh solid;
+    box-shadow: 0 1.0vh 6.0vh 0 rgb(0 0 0 / .09), 0 0.3vh 0 0 rgb(231 13 60 / .004);
+    transform-origin: top center;
+    transition: all 0.3s ease-in-out;
+}
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+}
+.main-menu ul.sub-menu li {
+    display: block;
+    margin: 0 0;
+    padding: 0.3vh 0;
+}
+.main-menu ul li:first-child {
+    margin-left: 0;
+}
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+.main-menu ul li:hover>ul.sub-menu, .main-menu ul li:hover>ul.mega-menu {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    z-index: 9;
+    top: 100%;
+    transition: all 0.3sease-in-out;
+}
+
+.main-menu ul.sub-menu {
+    padding: 1.8vh 2.0vh;
+    left: -2.7vh;
+}
+.main-menu ul.sub-menu{
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    width: max-content;
+    border-bottom: 0.3vh solid brown;
+    box-shadow: 0 1.0vh 6.0vh 0 rgb(0 0 0 / .09), 0 0.3vh 0 0 rgb(231 13 60 / .004);
+    transform-origin: top center;
+}
+.main-menu li a, .wish-cart a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+.sub-menu li a{
+    color:black;
+}
+.header-search input {
+    flex: 1;
+    border: none;
+    transition: allease 0.4s;
+    background-color: #fff0;
+    height: auto;
+    padding: 0.2vh 2.5vh 0.2vh 0;
+    color: #eee7d5;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.11vh;
+    font-size: 1.1vh;
+    min-width: 18.9vh;
+    
+}
+.search{
+    padding-left: 3.0vh;
+}
+.wish-cart{
+
+    display: inline;
+}
+.logo-div{
+    padding:1.0vh;
+}
+.wishlist{
+    padding-right: 4.8vh;
+    display: inline;
+}
+
+select, .form-control, .form-select, textarea, input {
+    border-radius: 0;
+    width: 100%;
+}
+
+.z-index-common {
+    position: relative;
+    z-index: 3;
+}
+img, svg {
+    vertical-align: middle;
+}

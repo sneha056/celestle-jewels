@@ -1,118 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Home Page</title>
+  <style>
+    :root {
+      --animate-duration: 1s;
+      --animate-delay: 1s;
+      --animate-repeat: 1;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- nav bar -->
-<div class="sticky-wrapper" id="navbar">
-  <div class="sticky-active">
+  <!-- nav bar -->
+  <div class="sticky-wrapper" id="navbar">
+    <div class="sticky-active">
       <div class="container1 custom-container">
-          <div class="row logo-div">
-              <div class="col-xl-2 col-md-auto col-auto">
-                  <img src="" alt="LOGO">
-              </div>
-              <div class="col-xl-6 col-md-auto col-auto">
-                  <!-- Toggle Button -->
-                  <button class="menu-toggle d-inline-block d-lg-none" aria-label="Toggle navigation">
-                      <i class="fa fa-bars" style="color: white; "></i> <!-- Font Awesome hamburger icon -->
-                  </button>
-
-                  <!-- Main Menu -->
-                  <nav class="main-menu">
-                      <ul>
-                          <li class="menu-item-has-children">
-                              <a href="index.html">Home</a>
-                          </li>
-                          <li class="menu-item-has-children">
-                              <a href="about.html">Contact Us</a>
-                          </li>
-                          <li class="menu-item-has-children">
-                              <a href="shop-sidebar.html">Necklace</a>
-                          </li>
-                          <li>
-                              <a href="shop.html">Earrings</a>
-                          </li>
-                          <li>
-                              <a href="shop.html">Braclets</a>
-                          </li>
-                          <li class="menu-item-has-children mega-menu-wrap">
-                              <a href="index.html">All jewellery</a>
-                              <ul class="sub-menu">
-                                  <li><a href="index.html">Earrings</a></li>
-                                  <li><a href="index-2.html">Braclets</a></li>
-                                  <li><a href="index-3.html">Rings</a></li>
-                                  <li><a href="index-3.html">Bahi</a></li>
-                                  <li><a href="index-3.html">Tikka</a></li>
-                              </ul>
-                          </li>
-                      </ul>
-                  </nav>
-              </div>
-              <div class="col-xl-2 col-md-auto col-auto search">
-                  <input type="text" placeholder="search" id="nav-search" style="border-radius: 4px;">
-              </div>
-              <div class="col-xl-2 col-md-auto col-auto">
-                  <div class="header-wc wish-cart">
-                      <a class="wc-link wishlist" href="cart.html">Wishlist
-                          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.5815 0C13.6435 0.0141142 12.726 0.26742 11.9215 0.734338C11.1171 1.20126 10.4543 1.86525 10 2.65927C9.54572 1.86525 8.8829 1.20126 8.07847 0.734338C7.27405 0.26742 6.35651 0.0141142 5.41852 0C3.92324 0.062848 2.51444 0.695644 1.49991 1.76014C0.485388 2.82464 -0.0524034 4.2343 0.00403263 5.68117C0.00403263 9.34531 3.99076 13.3471 7.33441 16.0604C8.08096 16.6673 9.02486 17 10 17C10.9751 17 11.919 16.6673 12.6656 16.0604C16.0092 13.3471 19.996 9.34531 19.996 5.68117C20.0524 4.2343 19.5146 2.82464 18.5001 1.76014C17.4856 0.695644 16.0768 0.062848 14.5815 0ZM11.5952 14.8274C11.1487 15.1912 10.5837 15.3906 10 15.3906C9.41628 15.3906 8.85131 15.1912 8.40481 14.8274C4.12487 11.3535 1.67003 8.02052 1.67003 5.68117C1.61308 4.66155 1.97521 3.66151 2.67742 2.89917C3.37964 2.13682 4.36497 1.67401 5.41852 1.61168C6.47206 1.67401 7.45739 2.13682 8.15961 2.89917C8.86182 3.66151 9.22395 4.66155 9.167 5.68117C9.167 5.89489 9.25477 6.09985 9.41098 6.25098C9.5672 6.4021 9.77908 6.487 10 6.487C10.2209 6.487 10.4328 6.4021 10.589 6.25098C10.7452 6.09985 10.833 5.89489 10.833 5.68117C10.7761 4.66155 11.1382 3.66151 11.8404 2.89917C12.5426 2.13682 13.5279 1.67401 14.5815 1.61168C15.635 1.67401 16.6204 2.13682 17.3226 2.89917C18.0248 3.66151 18.3869 4.66155 18.33 5.68117C18.33 8.02052 15.8751 11.3535 11.5952 14.8242V14.8274Z" fill="currentColor"></path>
-                          </svg>
-                      </a>
-                      <a class="wc-linkbag" href="cart.html">bag 0
-                          <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5.33315 6.33334V3.12501C5.33315 1.75001 6.24982 0.833344 7.62482 0.833344H10.3748C11.7498 0.833344 12.6665 1.75001 12.6665 3.12501V6.33334M16.709 14.6108H5.33315M5.70002 4.95834H12.3C15.4167 4.95834 15.7284 6.41584 15.9392 8.19418L16.7642 15.0692C17.03 17.3242 16.3334 19.1667 13.125 19.1667H4.88419C1.66669 19.1667 0.970022 17.3242 1.24502 15.0692L2.07003 8.19418C2.2717 6.41584 2.58336 4.95834 5.70002 4.95834Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                      </a>
-                  </div>
-              </div>
+        <div class="row logo-div">
+          <div class="col-xl-2 col-md-auto col-auto logo">
+            <a href="index.html">
+              <img src="images/Celeste Jewels logo.png" alt="LOGO" style="height: 80px;">
+            </a>
           </div>
-      </div>
-  </div>
-</div>
+          <div class="col-xl-6 col-md-auto col-auto">
+            <!-- Toggle Button -->
+            <button class="menu-toggle d-inline-block d-lg-none" aria-label="Toggle navigation">
+              <i class="fa fa-bars" style="color: black; "></i> <!-- Font Awesome hamburger icon -->
+            </button>
 
-<!-- banner1 -->
+            <!-- Main Menu -->
+            <nav class="main-menu">
+              <ul>
+                <li class="menu-item-has-children">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="necklace.html">Necklace</a>
+                </li>
+                <li>
+                  <a href="shop.html">Earrings</a>
+                </li>
+                <li>
+                  <a href="shop.html">Braclets</a>
+                </li>
+                <li class="menu-item-has-children mega-menu-wrap">
+                  <a href="Alljewellery.html">All jewellery</a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Earrings</a></li>
+                    <li><a href="index-2.html">Braclets</a></li>
+                    <li><a href="index-3.html">Rings</a></li>
+                    <li><a href="index-3.html">Bahi</a></li>
+                    <li><a href="index-3.html">Tikka</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xl-2 col-md-auto col-auto search">
+            <input type="text" placeholder="search" id="nav-search" style="border-radius: 4px;">
+          </div>
+          <div class="col-xl-2 col-md-auto col-auto">
+            <div class="header-wc wish-cart">
+              <a class="wc-link wishlist" href="cart.html">Wishlist
+                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.5815 0C13.6435 0.0141142 12.726 0.26742 11.9215 0.734338C11.1171 1.20126 10.4543 1.86525 10 2.65927C9.54572 1.86525 8.8829 1.20126 8.07847 0.734338C7.27405 0.26742 6.35651 0.0141142 5.41852 0C3.92324 0.062848 2.51444 0.695644 1.49991 1.76014C0.485388 2.82464 -0.0524034 4.2343 0.00403263 5.68117C0.00403263 9.34531 3.99076 13.3471 7.33441 16.0604C8.08096 16.6673 9.02486 17 10 17C10.9751 17 11.919 16.6673 12.6656 16.0604C16.0092 13.3471 19.996 9.34531 19.996 5.68117C20.0524 4.2343 19.5146 2.82464 18.5001 1.76014C17.4856 0.695644 16.0768 0.062848 14.5815 0ZM11.5952 14.8274C11.1487 15.1912 10.5837 15.3906 10 15.3906C9.41628 15.3906 8.85131 15.1912 8.40481 14.8274C4.12487 11.3535 1.67003 8.02052 1.67003 5.68117C1.61308 4.66155 1.97521 3.66151 2.67742 2.89917C3.37964 2.13682 4.36497 1.67401 5.41852 1.61168C6.47206 1.67401 7.45739 2.13682 8.15961 2.89917C8.86182 3.66151 9.22395 4.66155 9.167 5.68117C9.167 5.89489 9.25477 6.09985 9.41098 6.25098C9.5672 6.4021 9.77908 6.487 10 6.487C10.2209 6.487 10.4328 6.4021 10.589 6.25098C10.7452 6.09985 10.833 5.89489 10.833 5.68117C10.7761 4.66155 11.1382 3.66151 11.8404 2.89917C12.5426 2.13682 13.5279 1.67401 14.5815 1.61168C15.635 1.67401 16.6204 2.13682 17.3226 2.89917C18.0248 3.66151 18.3869 4.66155 18.33 5.68117C18.33 8.02052 15.8751 11.3535 11.5952 14.8242V14.8274Z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              </div>
+              <div class="header-wc wish-cart">
+              <a class="wc-linkbag" href="cart.html">bag 0
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.33315 6.33334V3.12501C5.33315 1.75001 6.24982 0.833344 7.62482 0.833344H10.3748C11.7498 0.833344 12.6665 1.75001 12.6665 3.12501V6.33334M16.709 14.6108H5.33315M5.70002 4.95834H12.3C15.4167 4.95834 15.7284 6.41584 15.9392 8.19418L16.7642 15.0692C17.03 17.3242 16.3334 19.1667 13.125 19.1667H4.88419C1.66669 19.1667 0.970022 17.3242 1.24502 15.0692L2.07003 8.19418C2.2717 6.41584 2.58336 4.95834 5.70002 4.95834Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- banner1 -->
   <section class="z-index-common hero-layout1">
-      <div class="vs-hero animate-elements">
-        <div class="vs-carousel hero-carousel background-image slick-initialized slick-slider" data-fade="true" style="background-image: url(banner-background.png); max-height: 485px;">
-        <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2996px;"><div class="slick-slide slick-current slick-active" style="width: 1498px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" data-slick-index="0" aria-hidden="false" tabindex="0">
-            <div class="hero-main">
-              <img src="hero-slide-1-1-1.png" alt="hero-img" class="hero-img1">
-              <img src="hero-slide-1-1-2.png" alt="hero-img" class="hero-img2">
-              <img src="hero-slide-1-1-3.jpg" alt="hero-img" class="hero-img3">
-              <img src="hero-slide-1-1-4.png" alt="hero-img" class="hero-img4">
-              <div class="container">
-                <div class="row bannerrow" style="padding-left: 200px;">
-                  <div class="col-lg-6">
-                    <div class="hero-content">
-                      <h1 class="hero-title">
-                        <span>
-                      <span class="highlight htext1">necklace</span> <span class="htext2">jewellery</span>
+    <div class="vs-hero animate-elements">
+      <div class="vs-carousel hero-carousel background-image slick-initialized slick-slider" data-fade="true"
+        style="background-image: url(images/banner-background.png); max-height: 485px;">
+        <div class="slick-list draggable">
+          <div class="slick-track" style="opacity: 1; width: 2996px;">
+            <div class="slick-slide slick-current slick-active"
+              style="width: 1498px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+              data-slick-index="0" aria-hidden="false" tabindex="0">
+              <div class="hero-main">
+                <img src="images/hero-slide-1-1-1.png" alt="hero-img" class="hero-img1 animate__fadeInUp"
+                  style="animation-delay: 0s;">
+                <img src="images/hero-slide-1-1-2.png" alt="hero-img" class="hero-img2 animate__fadeInUp"
+                  style="animation-delay: 0.2s;">
+                <img src="images/hero-slide-1-1-3.jpeg" alt="hero-img" class="hero-img3 animate__fadeInUp"
+                  style="animation-delay: 0.4s;" width="38%">
+                <div class="container">
+                  <div class="row bannerrow" style="padding-left: 200px;">
+                    <div class="col-lg-6" style="text-align: right;">
+                      <div class="hero-content">
+                        <h1 class="hero-title">
+                          <span>
+                            <span class="highlight htext1">Celeste</span> <span class="htext2">Jewels</span>
+                          </span>
+                        </h1>
+                        <span class="hero-subtitle">
                         </span>
-                      </h1>
-                      <span class="hero-subtitle">
-                      </span>
-                      <div class="d-flex overflow-hidden hbtn1" style="padding-left: 200px;">
-                        <a href="https://html.vecurosoft.com/luxrio/demo/shop.html" class="vs-btn" tabindex="0">Shop
-                          Now</a>
+                        <div class="d-flex overflow-hidden hbtn1 button animate__fadeslide"
+                          style="animation-delay: 0.5s;">
+                          <a href="Alljewellery.html" class="vs-btn" tabindex="0"><span>Shop Now</span></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div></div></div></div>
-        
+          </div>
+        </div>
       </div>
+
+    </div>
   </section>
 
-<!-- section2  -->
+  <!-- section2  -->
 
   <section class="section-layout1 space space-extra-bottom z-index-common">
     <div class="container">
@@ -126,20 +153,27 @@
         </div>
       </div>
       <div class="row gx-60">
-        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
-          <div class="product-style1">
+        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.25s"
+          style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
+          <div class="product-style1 fade-in-up" style="animation-delay: 0s;">
             <div class="product-img">
-              <img class="img" src="product-1-1.jpg" alt="product">
+              <img class="img" src="images/product-1-1.jpg" alt="product">
               <div class="product-action">
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
               </div>
@@ -148,8 +182,8 @@
               <a href="shop.html">Flower Pendant</a>
             </h3>
             <span class="product-price">
-          <span class="product-price__number">₹355.00</span>
-            <a class="product-cart" href="cart.html">add to cart</a>
+              <span class="product-price__number">₹355.00</span>
+              <a class="product-cart" href="cart.html">add to cart</a>
             </span>
             <div class="product-rate">
               <i class="fa fa-star"></i>
@@ -160,20 +194,27 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.45s" style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
-          <div class="product-style1">
+        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.45s"
+          style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
+          <div class="product-style1 fade-in-up" style="animation-delay: 0s;">
             <div class="product-img">
-              <img class="img" src="product-1-2.jpg" alt="product">
+              <img class="img" src="images/product-1-2.jpg" alt="product">
               <div class="product-action">
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
               </div>
@@ -182,8 +223,8 @@
               <a href="shop.html">Diamond Gold</a>
             </h3>
             <span class="product-price">
-          <span class="product-price__number">₹355.00</span>
-            <a class="product-cart" href="cart.html">add to cart</a>
+              <span class="product-price__number">₹355.00</span>
+              <a class="product-cart" href="cart.html">add to cart</a>
             </span>
             <div class="product-rate">
               <i class="fa fa-star"></i>
@@ -194,20 +235,27 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.65s" style="visibility: visible; animation-delay: 0.65s; animation-name: fadeInUp;">
-          <div class="product-style1">
+        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.65s"
+          style="visibility: visible; animation-delay: 0.65s; animation-name: fadeInUp;">
+          <div class="product-style1 fade-in-up" style="animation-delay: 0s;">
             <div class="product-img">
-              <img class="img" src="product-1-3.jpg" alt="product">
+              <img class="img" src="images/product-1-3.jpg" alt="product">
               <div class="product-action">
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
               </div>
@@ -216,8 +264,8 @@
               <a href="shop.html">Black Pendant</a>
             </h3>
             <span class="product-price">
-          <span class="product-price__number">₹355.00</span>
-            <a class="product-cart" href="cart.html">add to cart</a>
+              <span class="product-price__number">₹355.00</span>
+              <a class="product-cart" href="cart.html">add to cart</a>
             </span>
             <div class="product-rate">
               <i class="fa fa-star"></i>
@@ -228,20 +276,27 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.85s" style="visibility: visible; animation-delay: 0.85s; animation-name: fadeInUp;">
-          <div class="product-style1">
+        <div class="col-lg-3 col-md-6 wow animate__fadeInUp wow-animated" data-wow-delay="0.85s"
+          style="visibility: visible; animation-delay: 0.85s; animation-name: fadeInUp;">
+          <div class="product-style1 fade-in-up" style="animation-delay: 0s;">
             <div class="product-img">
-              <img class="img" src="product-1-4.jpg" alt="product">
+              <img class="img" src="images/product-1-4.jpeg" alt="product">
               <div class="product-action">
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </button>
               </div>
@@ -250,8 +305,8 @@
               <a href="shop.html">wedding ring</a>
             </h3>
             <span class="product-price">
-          <span class="product-price__number">₹355.00</span>
-            <a class="product-cart" href="cart.html">add to cart</a>
+              <span class="product-price__number">₹355.00</span>
+              <a class="product-cart" href="cart.html">add to cart</a>
             </span>
             <div class="product-rate">
               <i class="fa fa-star"></i>
@@ -268,63 +323,71 @@
 
   <!-- top categories -->
   <div class="grid-container">
-    <div class="view-style item1 wow animate__fadeInUp wow-animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+    <div class="view-style item1 wow animate__fadeInUp wow-animated" data-wow-delay="0.1s"
+      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
       <img src="item-1-1.jpg" alt="Large Necklace">
       <div class="view-content">
         <h2 class="view-title">Top categories</h2>
         <a class="view-link" href="shop.html">shop now<i class="fa fa-angles-right"></i></a>
       </div>
     </div>
-    <div class="view-style item2 wow animate__fadeInUp wow-animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <div class="view-style item2 wow animate__fadeInUp wow-animated" data-wow-delay="0.2s"
+      style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
       <img src="item-1-2.jpg" alt="Necklace">
       <h2 class="view-title2"><a href="shop.html">necklace</a></h2>
     </div>
-    <div class="view-style item3 wow animate__fadeInUp wow-animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+    <div class="view-style item3 wow animate__fadeInUp wow-animated" data-wow-delay="0.3s"
+      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
       <img src="item-1-3.jpg" alt="Earrings">
       <h2 class="view-title2"><a href="shop.html">Earrings</a></h2>
     </div>
-    <div class="view-style item4 wow animate__fadeInUp wow-animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+    <div class="view-style item4 wow animate__fadeInUp wow-animated" data-wow-delay="0.4s"
+      style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
       <img src="item-1-4.jpg" alt="Bracelet">
       <h2 class="view-title2">
         <a href="shop.html">
           Bracelets
           <span>
-        <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="8.25" x2="19" y2="8.25" stroke="white" stroke-width="1.5"></line>
-          <line x1="9.75" y1="3.27836e-08" x2="9.75" y2="17" stroke="white" stroke-width="1.5"></line>
-        </svg>
-      </span>
+            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="8.25" x2="19" y2="8.25" stroke="white" stroke-width="1.5"></line>
+              <line x1="9.75" y1="3.27836e-08" x2="9.75" y2="17" stroke="white" stroke-width="1.5"></line>
+            </svg>
+          </span>
         </a>
       </h2>
     </div>
   </div>
-    
+
   <!-- new banner free shipping... -->
   <section class="space-top">
     <div class="container">
       <div class="row">
-        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.2s"
+          style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
           <div class="feature-style">
             <img class="feature-style__icon mb-3" src="vs-feature-icon-1-1.svg" alt="vs-feature-icon-1-1">
             <h3 class="feature-style__title">Free Shipping</h3>
             <p class="feature-style__text">Fact that a reader will distracted</p>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.4s"
+          style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
           <div class="feature-style">
             <img class="feature-style__icon mb-3" src="vs-feature-icon-1-2.svg" alt="vs-feature-icon-1-1">
             <h3 class="feature-style__title">online Support</h3>
             <p class="feature-style__text">within 30 days for an exchange</p>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.6s"
+          style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
           <div class="feature-style">
             <img class="feature-style__icon mb-3" src="vs-feature-icon-1-3.svg" alt="vs-feature-icon-1-1">
             <h3 class="feature-style__title">Money Back</h3>
             <p class="feature-style__text">Fact that a reader will distracted</p>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+        <div class="col-xl-3 col-md-6 mb-30 wow animate__fadeInUp wow-animated" data-wow-delay="0.8s"
+          style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
           <div class="feature-style">
             <img class="feature-style__icon mb-3" src="vs-feature-icon-1-4.svg" alt="vs-feature-icon-1-1">
             <h3 class="feature-style__title">Return Product</h3>
@@ -337,22 +400,15 @@
   </section>
 
   <!-- new launch -->
-  <section class="space-top space-extra-bottom z-index-common contact-layout2">
+  <section class="space-top space-extra-bottom z-index-common contact-layout2" style="background-color: #f4efeb;">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-30">
           <div class="img-box5">
-            <div class="img1">
-              <img src="about-1-3.jpg" alt="about-1-3">
-            </div>
-            <div class="img2">
-              <img class="it-scroll-element" data-it-scroll-speed="2" data-it-scroll-y="50" src="about-1-4.jpg" alt="about-1-4" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 35.3382px, 0px);">
-            </div>
-            <div class="img3">
-              <img class="it-scroll-element" data-it-scroll-speed="2" data-it-scroll-y="50" src="about-1-6.svg" alt="about-1-5" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px);">
-            </div>
-            <div class="img4">
-              <img class="it-scroll-element" data-it-scroll-speed="2" data-it-scroll-y="50" src="about-1-5.svg" alt="about-1-5" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 29.3399px, 0px);">
+            <div class="img-box5">
+              <div class="img1">
+                <video class="responsive-video" src="images/vedio.mp4" autoplay loop muted></video>
+              </div>
             </div>
           </div>
         </div>
@@ -360,13 +416,12 @@
           <div class="text-center">
             <img class="mb-20" src="about-1-7.svg" alt="title shape" style="padding-bottom: 14px">
             <span class="sec-subtitle">customs jewelry</span>
-            <h2 class="sec-title text-white">Graceful Ear Drops</h2>
+            <h2 class="sec-title sub-title">Graceful Ear Drops</h2>
             <img src="title-shape-1.svg" alt="title shape">
-            <p class="sec-text pt-20 mb-30 fw-medium">Lorem ipsum dolor sit amet, conse elit, sedid do eiusmod
-              tempor incidit
-              laboret dolore magna aliqua. Quis ipsum conseel usndi laboris
-              sitamet sedid sedid do eiusm.</p>
-            <a href="shop.html" class="vs-btn style4" tabindex="0">contact us</a>
+            <p class="sec-text pt-20 mb-30 fw-medium" style="color: black;" >Explore the timeless beauty of handcrafted gold jadau jewelry,
+              designed to add elegance and tradition to every moment.<br><br> Shop now and indulge in the finest
+              craftsmanship, where each piece tells a story of heritage and luxury.</p>
+            <a href="shop.html" class="style4" tabindex="0"><span> Shop Now</span></a>
           </div>
         </div>
       </div>
@@ -374,45 +429,56 @@
   </section>
 
   <!-- static banner -->
-  <div class="instagram-layout2 vs-carousel slick-initialized slick-slider" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
-      <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1540px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" style="width: 308px;" data-slick-index="0" aria-hidden="false" tabindex="0">
-        <div class="insta-style">
-          <img src="inssta-2-1.jpg" alt="image">
+  <div class="instagram-layout2 vs-carousel slick-initialized slick-slider" data-slide-show="5" data-lg-slide-show="4"
+    data-md-slide-show="3" data-sm-slide-show="2">
+    <div class="slick-list draggable">
+      <div class="slick-track" style="opacity: 1; width: 1540px; transform: translate3d(0px, 0px, 0px);">
+        <div class="slick-slide slick-current slick-active" style="width: 25%" data-slick-index="0"
+          aria-hidden="false" tabindex="0">
+          <div class="insta-style">
+            <img src="images/inssta-2-1.jpg" alt="image" class="fade-in-zoom">
+          </div>
         </div>
-      </div><div class="slick-slide slick-active" style="width: 308px;" data-slick-index="1" aria-hidden="false" tabindex="0">
-        <div class="insta-style">
-          <img src="inssta-2-2.jpg" alt="image">
+        <div class="slick-slide slick-active" style="width: 25%;" data-slick-index="1" aria-hidden="false"
+          tabindex="0">
+          <div class="insta-style">
+            <img src="images/inssta-2-2.png" alt="image" class="fade-in-zoom">
+          </div>
         </div>
-      </div><div class="slick-slide slick-active" style="width: 308px;" data-slick-index="2" aria-hidden="false" tabindex="0">
-        <div class="insta-style">
-          <img src="inssta-2-3.jpg" alt="img">
+        <div class="slick-slide slick-active" style="width: 25%;" data-slick-index="2" aria-hidden="false"
+          tabindex="0">
+          <div class="insta-style">
+            <img src="images/inssta-2-3.jpg" alt="img" class="fade-in-zoom">
+          </div>
         </div>
-      </div><div class="slick-slide slick-active" style="width: 308px;" data-slick-index="3" aria-hidden="false" tabindex="0">
-        <div class="insta-style">
-          <img src="inssta-2-4.jpg" alt="image">
+        <div class="slick-slide slick-active" style="width: 25%;" data-slick-index="3" aria-hidden="false"
+          tabindex="0">
+          <div class="insta-style">
+            <img src="images/inssta-2-4.jpg" alt="image" class="fade-in-zoom">
+          </div>
         </div>
-      </div><div class="slick-slide slick-active" style="width: 308px;" data-slick-index="4" aria-hidden="false" tabindex="0">
-        <div class="insta-style">
-          <img src="inssta-2-5.jpg" alt="image">
-        </div>
-      </div></div></div></div>
+      </div>
+    </div>
+  </div>
 
   <!-- footer -->
-  <footer class="footer-layout2 background-image" style="background-color: black;">
+  <footer class="footer-layout2 background-image" style="background-color: #f7e9cc;">
     <div class="footer-widgets">
       <div class="container">
         <div class="row gy-4 justify-content-between">
           <div class="col-lg-3">
             <div class="footer-logo">
-              <a href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+              <a href="index.html"><img src="images/footer Celeste Jewels logo.png" alt="logo" style="height: 150px;"></a>
             </div>
+          </div>
+          <div class="col-lg-3">
             <div class="footer-info style2">
-              <p><span>Address :</span> 966 munich Expressway
+              <p><span>Address :</span> 966 munich Expressway<br>
                 Sue 700 Germany, TX 7859</p>
             </div>
             <a href="cart.html"><img src="payments.png" alt="payments"></a>
           </div>
-          <div class="col-lg-auto">
+          <div class="col-lg-2">
             <div class="footer-widget">
               <h3 class="footer-title">Shopping</h3>
               <div class="footer-menu2">
@@ -423,7 +489,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-auto">
+          <div class="col-lg-2">
             <div class="footer-widget">
               <h3 class="footer-title">About Store</h3>
               <div class="footer-menu2">
@@ -434,7 +500,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-auto">
+          <div class="col-lg-2">
             <div class="footer-widget">
               <h3 class="footer-title">Policies</h3>
               <div class="footer-menu2">
@@ -452,7 +518,8 @@
     </p>
   </footer>
 
-<!-- Javascript -->
+  <!-- Javascript -->
   <script src="java script/homepage.js"></script>
 </body>
+
 </html>

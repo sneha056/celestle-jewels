@@ -1,0 +1,110 @@
+body {
+    max-width: 1514px;
+    overflow-x: hidden;
+    margin: 0 !important;
+}
+
+.breadcumb-wrapper {
+    background-color: #021210;
+    position: relative;
+    min-height: 561px;
+    display: flex;
+    align-items: end;
+    padding: 129px 0 125px;
+}
+
+.background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.z-index-common {
+    position: relative;
+    z-index: 3;
+}
+
+.breadcumb-content {
+    text-align: left;
+}
+
+.breadcumb-title {
+    color: white;
+    margin: -.3em 0 10px 10px;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+.blog-title,
+.pagi-title,
+.breadcumb-title {
+    word-break: break-word;
+}
+
+.breadcumb-menu {
+    max-width: 100%;
+    margin: 0em 0 0em 10px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.breadcumb-menu li,
+.breadcumb-menu a,
+.breadcumb-menu span {
+    white-space: normal;
+    word-break: break-word;
+    font-weight: 700;
+    font-size: 15px;
+    color: #bdbbba;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+    text-decoration: none;
+}
+
+.breadcumb-menu a {
+    color: red;
+}
+
+.breadcumb-menu li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.breadcumb-menu li:after {
+    position: relative;
+    margin: 0 6px;
+    color: red;
+}
+.space{padding-top: 12.0vh;
+}
+.product-style1 {
+    margin-bottom: 3.0vh;
+    text-align: center;
+}
+.product-style1 .product-img {
+    position: relative;
+    margin-bottom: 3.0vh;
+    display: inline-block;
+}
+
+.product-style1 .product-img>img, .product-style1 .product-img .img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    transform: rotate(22deg);
+}
+.product-style1 .product-title{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    margin-left: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}

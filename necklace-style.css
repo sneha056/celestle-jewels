@@ -1,0 +1,116 @@
+body {
+    max-width: 1514px;
+    overflow-x: hidden;
+    margin: 0 !important;
+}
+
+.breadcumb-wrapper {
+    background-color: #021210;
+    position: relative;
+    min-height: 561px;
+    display: flex;
+    align-items: end;
+    padding: 129px 0 125px;
+}
+
+.background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.z-index-common {
+    position: relative;
+    z-index: 3;
+}
+
+.breadcumb-content {
+    text-align: left;
+}
+
+.breadcumb-title {
+    color: white;
+    margin: -.3em 0 10px 10px;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+.blog-title,
+.pagi-title,
+.breadcumb-title {
+    word-break: break-word;
+}
+
+.breadcumb-menu {
+    max-width: 100%;
+    margin: 0em 0 0em 10px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.breadcumb-menu li,
+.breadcumb-menu a,
+.breadcumb-menu span {
+    white-space: normal;
+    word-break: break-word;
+    font-weight: 700;
+    font-size: 15px;
+    color: #bdbbba;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+    text-decoration: none;
+}
+
+.breadcumb-menu a {
+    color: red;
+}
+
+.breadcumb-menu li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.breadcumb-menu li:after {
+    position: relative;
+    margin: 0 6px;
+    color: red;
+}
+
+.necklace-category {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    padding: 10px;
+}
+
+.product {
+    clip-path: polygon(10% 0%, 90% 0%,
+            /* Top corners slightly cut */
+            100% 10%, 100% 90%,
+            /* Right straight edges */
+            90% 100%, 10% 100%,
+            /* Bottom corners slightly cut */
+            0% 90%, 0% 10%
+            /* Left straight edges */
+        );
+    background-color: white;
+    text-align: center;
+
+}
+.image {
+    width: 174px;
+    height: 243px;
+    position: relative;
+    top: 10px;
+}
+.product-title{
+    padding-top: 20px;
+}
