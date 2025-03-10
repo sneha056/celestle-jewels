@@ -893,7 +893,7 @@ a {
     text-decoration: none;
 }
 .grid-container a:hover{
-    color:black;
+    color:#7d1550;
     text-decoration: underline;
 }
 /* free shipping */
