@@ -45,19 +45,19 @@
                   <a href="necklace.html">Necklace</a>
                 </li>
                 <li>
-                  <a href="shop.html">Earrings</a>
+                  <a href="Earrings.html">Earrings</a>
                 </li>
                 <li>
-                  <a href="shop.html">Braclets</a>
+                  <a href="Bracelets.html">Bracelets</a>
                 </li>
                 <li class="menu-item-has-children mega-menu-wrap">
                   <a href="Alljewellery.html">All jewellery</a>
                   <ul class="sub-menu">
-                    <li><a href="index.html">Earrings</a></li>
-                    <li><a href="index-2.html">Braclets</a></li>
-                    <li><a href="index-3.html">Rings</a></li>
-                    <li><a href="index-3.html">Bahi</a></li>
-                    <li><a href="index-3.html">Tikka</a></li>
+                    <li><a href="Earrings.html">Earrings</a></li>
+                    <li><a href="Bracelets.html">Bracelets</a></li>
+                    <li><a href="Rings.html">Rings</a></li>
+                    <li><a href="Bahi.html">Bahi</a></li>
+                    <li><a href="Tikka.html">Tikka</a></li>
                   </ul>
                 </li>
                 <li class="menu-item-has-children">
@@ -146,7 +146,7 @@
       <div class="row">
         <div class="col-lg-auto mx-auto">
           <div class="title-area text-center">
-            <span class="sec-subtitle">Find the perfect</span>
+            <span class="sec-subtitle" style="color: wheat;">Find the perfect</span>
             <h2 class="sec-title text-white">High Class Jewellery</h2>
             <img src="title-shape-1.svg" alt="title shape">
           </div>
@@ -415,10 +415,10 @@
         <div class="col-lg-6 mb-30">
           <div class="text-center">
             <img class="mb-20" src="about-1-7.svg" alt="title shape" style="padding-bottom: 14px">
-            <span class="sec-subtitle">customs jewelry</span>
+            <span class="sec-subtitle">custom jewellery</span>
             <h2 class="sec-title sub-title">Graceful Ear Drops</h2>
             <img src="title-shape-1.svg" alt="title shape">
-            <p class="sec-text pt-20 mb-30 fw-medium" style="color: black;" >Explore the timeless beauty of handcrafted gold jadau jewelry,
+            <p class="sec-text pt-20 mb-30 fw-medium" style="color: black;" >Explore the timeless beauty of handcrafted gold jadau jewellery,
               designed to add elegance and tradition to every moment.<br><br> Shop now and indulge in the finest
               craftsmanship, where each piece tells a story of heritage and luxury.</p>
             <a href="shop.html" class="style4" tabindex="0"><span> Shop Now</span></a>
@@ -482,20 +482,19 @@
             <div class="footer-widget">
               <h3 class="footer-title">Shopping</h3>
               <div class="footer-menu2">
-                <a href="shop.html">Gift card</a>
-                <a href="about.html">terms &amp; conditions</a>
-                <a href="about.html">privacy policy</a>
-                <a href="about.html">delivery</a>
+                <a href="Alljewellery.html">All categories</a>
+                <a href="necklace.html">Necklace</a>
+                <a href="Earrings.html">Earrings</a>
+                <a href="Bahi.html">Bahi</a>
               </div>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="footer-widget">
-              <h3 class="footer-title">About Store</h3>
+              <h3 class="footer-title">Useful Links</h3>
               <div class="footer-menu2">
-                <a href="about.html">Shopping</a>
-                <a href="cart.html">Order Cart</a>
-                <a href="about.html">Privacy Policy</a>
+                <a href="Alljewellery.html">Wishlist</a>
+                <a href="cart.html">Bag</a>
                 <a href="about.html">Help</a>
               </div>
             </div>
@@ -504,9 +503,9 @@
             <div class="footer-widget">
               <h3 class="footer-title">Policies</h3>
               <div class="footer-menu2">
-                <a href="about.html">Return Policies</a>
-                <a href="cart.html">Refund Policies</a>
-                <a href="about.html">Terms and Conditions</a>
+                <a href="return-policy.html">Return Policies</a>
+                <a href="return-policy.html">Refund Policies</a>
+                <a href="termsandconditions.html">terms &amp; conditions</a>
               </div>
             </div>
           </div>
@@ -520,6 +519,166 @@
 
   <!-- Javascript -->
   <script src="java script/homepage.js"></script>
+
+  <!-- top button  -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2L4 10h5v8h6v-8h5z"/>
+    </svg>
+  </button>
+
+  <!-- section1  -->
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const animatedElements = document.querySelectorAll(".animate-elements .hero-subtitle, .animate-elements .hero-text, .animate-elements .hbtn1, .animate-elements .hero-img1, .animate-elements .hero-img2, .animate-elements .hero-img3, .animate-elements .hero-img4, .animate-elements .hero-title .htext1, .animate-elements .hero-title .htext2");
+
+    function triggerAnimations() {
+        animatedElements.forEach((element, index) => {
+            // Remove animation class to reset it
+            element.classList.remove("animate__fadeInUp");
+
+            // Force reflow to reset animation
+            void element.offsetWidth;
+
+            // Re-add animation class with staggered delay
+            setTimeout(() => {
+                element.style.animationDelay = `${index * 0.2}s`; // Stagger effect
+                element.classList.add("animate__fadeInUp");
+            }, 100);
+        });
+    }
+
+    // Intersection Observer to detect visibility in viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                triggerAnimations();
+            }
+        });
+    }, {
+        threshold: 0.3 // Trigger animation when 30% of the section is visible
+    });
+
+    // Observe the container with animated elements
+    const section = document.querySelector('.animate-elements');
+    if (section) observer.observe(section);
+});</script>
+
+<!-- section2  -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const products = document.querySelectorAll(".product-style1");
+
+  // Function to apply fade-in-up animation with staggered effect
+  function triggerAnimations() {
+      products.forEach((product, index) => {
+          // Remove the animation class to reset it
+          product.classList.remove("fade-in-up");
+          
+          // Use a timeout to ensure reflow before re-adding class
+          setTimeout(() => {
+              product.style.animationDelay = `${index * 0.2}s`;
+              product.classList.add("fade-in-up");
+          }, 50); // Small delay to ensure reset works
+      });
+  }
+
+  // Intersection Observer to detect when the section is in the viewport
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Trigger animations each time section enters viewport
+              triggerAnimations();
+          }
+      });
+  }, {
+      threshold: 0.5 // 50% of the section must be visible
+  });
+
+  // Observe the section containing the products
+  const section = document.querySelector('.section-layout1');
+  if (section) observer.observe(section);
+});
+</script>
+
+<!-- section4 -->
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".feature-style__icon");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    images.forEach((img) => observer.observe(img));
+});
+
+
+
+</script>
+
+<!-- section 6 -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+     const images = document.querySelectorAll(".insta-style img");
+ 
+     // Function to check if an element is in the viewport
+     function isElementInViewport(el) {
+         const rect = el.getBoundingClientRect();
+         return (
+             rect.top >= 0 &&
+             rect.left >= 0 &&
+             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+         );
+     }
+ 
+     // Function to apply animation when the image is in the viewport
+     function checkImagesInView() {
+         images.forEach(img => {
+             if (isElementInViewport(img)) {
+                 img.classList.add("fade-in-zoom"); // Add class to trigger the animation
+             } else {
+                 img.classList.remove("fade-in-zoom"); // Optional: Reset the animation when it's out of view
+             }
+         });
+     }
+ 
+     // Listen for scroll events
+     window.addEventListener("scroll", checkImagesInView);
+ 
+     // Check on load as well in case some images are already in the viewport
+     checkImagesInView();
+ });
+ 
+ </script>
+
+ <!-- topbutton script -->
+ <script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "flex";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 </body>
 
 </html>

@@ -83,7 +83,7 @@ body {
     color: red;
 }
 
-.necklace-category {
+.main-category {
     background-color: black;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
