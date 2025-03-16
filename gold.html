@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Gold Price</title>
+</head>
+<body>
+  <h1 id="gold-price"></h1>
+  <script>
+    var myHeaders = new Headers();
+    myHeaders.append("x-access-token", "goldapi-1lpfdusm88m57ca-io");
+    myHeaders.append("Content-Type", "application/json");
+  
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+  
+    fetch("https://www.goldapi.io/api/XAU/INR", requestOptions)
+      .then(response => response.json()) // Change response.text() to response.json()
+      .then(result => {
+        const price24k = (result.price_gram_24k*10+5000).toFixed(0);
+        document.getElementById('gold-price').innerHTML = `Current Gold Price (24K): ${price24k}`;
+      })
+      .catch(error => console.log('error', error));
+  </script>
+</body>
+</html>

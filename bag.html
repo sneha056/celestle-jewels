@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="bag-style.css">
+  <title>Bag</title>
+</head>
+
+<body>
+  <!-- banner -->
+  <div class="breadcumb-wrapper background-image" style="background-image: url(breadcumb-bg-4.jpg);">
+    <div class="container z-index-common">
+      <div class="breadcumb-content">
+        <h1 class="breadcumb-title">Bag</h1>
+        <div class="breadcumb-menu-wrap">
+          <ul class="breadcumb-menu">
+            <li><a href="index.html">Home &gt &gt</a></li>
+            <li>Bag</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="space space-extra-bottom" style="background-color: #7d1550;">
+    <div class="container">
+      <div class="woocommerce-notices-wrapper">
+        <div class="woocommerce-message">Shipping costs updated.</div>
+      </div>
+      <form action="#" class="woocommerce-cart-form">
+        <table class="cart_table">
+          <thead>
+            <tr>
+              <th class="cart-col-image">Image</th>
+              <th class="cart-col-productname">Product Name</th>
+              <th class="cart-col-price">Price</th>
+              <th class="cart-col-quantity">Quantity</th>
+              <th class="cart-col-total">Total</th>
+              <th class="cart-col-remove">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart_item">
+              <td data-title="Product">
+                <a class="cart-productimage" href="shop.html">
+                  <img width="100" height="95" src="assets/img/shop/product-1-1.png" alt="Image">
+                </a>
+              </td>
+              <td data-title="Name">
+                <a class="cart-productname" href="shop.html">BMW Car Lexus GS
+                  Steering...
+                </a>
+              </td>
+              <td data-title="Price"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
+              <td data-title="Quantity">
+                <div class="quantity style2">
+                  <div class="quantity__field quantity-container">
+                    <button class="quantity-minus qty-btn">
+                      <i class="fa-solid fa-minus fal"></i>
+                    </button>
+                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="quantity"
+                      value="01" title="Qty">
+                    <button class="quantity-plus qty-btn">
+                      <i class="fa-solid fa-plus fal"></i>
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td data-title="Total"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
+              <td data-title="Remove"><a href="#" class="remove"><i class="fa-solid fa-trash fal"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <div class="row justify-content-end">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <h2 class="h4 summary-title">Cart Totals</h2>
+          <table class="cart_totals">
+            <tbody>
+              <tr>
+                <td>Cart Subtotal</td>
+                <td data-title="Cart Subtotal"><span class="amount"><bdi><span>$</span>600.00</bdi></span>
+                </td>
+              </tr>
+              <tr class="shipping">
+                <th>Shipping and Handling</th>
+                <td data-title="Shipping and Handling">
+                  <ul class="woocommerce-shipping-methods list-unstyled">
+                    <li><input type="radio" id="free_shipping" name="shipping_method" class="shipping_method"> <label
+                        for="free_shipping">Free
+                        shipping</label></li>
+                    <li><input type="radio" id="flat_rate" name="shipping_method" class="shipping_method"
+                        checked="checked"> <label for="flat_rate">Flat
+                        rate</label></li>
+                  </ul>
+                  <p class="woocommerce-shipping-destination">Shipping options will be updated during
+                    checkout.</p>
+                  <form action="https://api.web3forms.com/submit" method="POST" class="woocommerce-cart-form">
+                    <p style="color: black; font-weight: bold;">Enter address:</p>
+                    
+                    <div class="shipping-calculator-form">
+                      <input type="hidden" name="access_key" value="fc94ede8-267e-42e6-8a99-d759efbdbdff">
+                      <p class="form-row">
+                        <input class="form-control" type="text" name="name" id="fname" placeholder="Your Name *"
+                          required>
+                      </p>
+                      <p class="form-row">
+                        <input class="form-control" type="text" name="name" id="lname" placeholder="Last Name ">
+                      </p>
+                      <p class="form-row">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Email Address *"
+                          required>
+                      </p>
+                      <p class="form-row">
+                        <input class="form-control" type="number" name="phone" id="phone" placeholder="Phone *"
+                          required>
+                      </p>
+
+                      <p class="form-row">
+                        <input class="form-control" type="text" name="State" id="State"
+                          placeholder="Enter Your State: *" required>
+                      </p>
+                      <p class="form-row"><input type="text" class="form-control" placeholder="Town / City *" required>
+                      </p>
+                      <p class="form-row"><input type="text" class="form-control" placeholder="Postcode / ZIP *"
+                          required>
+                      </p>
+                    </div>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="order-total">
+                <td>Order Total</td>
+                <td data-title="Total"><strong><span class="amount"><bdi><span>$</span>600.00</bdi></span></strong></td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="wc-proceed-to-checkout mb-30"><a href="checkout.html" class="vs-btn">Proceed
+              to checkout</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="java script/navbar.js"></script>
+
+
+  <script src="java script/footer.js"></script>
+</body>
+
+</html>

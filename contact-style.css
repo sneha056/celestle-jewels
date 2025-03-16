@@ -1,29 +1,87 @@
-body{
+body {
     max-width: 1514px;
-    overflow-x: hidden; 
-   margin: 0 !important;
+    overflow-x: hidden;
+    margin: 0 !important;
+    background-color: #7d1550;
 }
+
 .breadcumb-wrapper {
+    background-color: #021210;
     position: relative;
     min-height: 561px;
     display: flex;
     align-items: end;
     padding: 129px 0 125px;
-height: 500px;
-    background-image: url('banner-background.png'); /* Set background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
 }
-.breadcumb-images {
-    position: absolute;
-    right: 50px; /* Adjust distance from the right */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
+
+.background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
-.breadcumb-content h1{
-    font-size: 100px;
-    color:#7d1550 ;
+
+.z-index-common {
+    position: relative;
+    z-index: 3;
+}
+
+.breadcumb-content {
+    text-align: left;
+}
+
+.breadcumb-title {
+    color: #7d1550;
+    margin: -.3em 0 10px 10px;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+.blog-title,
+.pagi-title,
+.breadcumb-title {
+    word-break: break-word;
+}
+
+.breadcumb-menu {
+    max-width: 100%;
+    margin: 0em 0 0em 10px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.breadcumb-menu li,
+.breadcumb-menu a,
+.breadcumb-menu span {
+    white-space: normal;
+    word-break: break-word;
+    font-weight: 700;
+    font-size: 15px;
+    color: #bdbbba;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+    text-decoration: none;
+}
+
+.breadcumb-menu a {
+    color: #7d1550;
+}
+
+.breadcumb-menu li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.breadcumb-menu li:after {
+    position: relative;
+    margin: 0 6px;
+    color: #7d1550;
 }
 
 
@@ -104,95 +162,23 @@ height: 500px;
     font-weight: 600;
     height: 60px;
 }
+.form-control::after{
+    background-color: #d5c8b7;
+}
 .form-style2 .vs-btn {
     margin-top: 10px;
 }
 .form-group ::placeholder{
-    color: black
+    color: #be83a4
 }
 .vs-btn{
-    background-color: #d5c8b7;
-    color: black;
+    background-image: radial-gradient(#d5c8b7, #7d1550);
     padding: 19px 45px;
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: solid;
+    border-color:#d5c8b7 ;
 }
-/* <!-- footer --> */
-.footer-layout2 {
-    padding-bottom: 0.2vh;
-    position: relative;
-    z-index: 9;
-}
-.footer-widgets {
-    padding: 9.0vh 0;
-}
-.footer-logo {
-    margin-bottom: 3.5vh;
-}
-.footer-info {
-    font-size: 2vh;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--smoke-color);
-}
-.footer-info.style2 p {
-    color:#6c1447;
-    font-weight: 600;
-    line-height: 3.0vh;
-    text-transform: capitalize;
-}
-p {
-    margin: 0 0 1.8vh 0;
-    color: #6c1447;
-    line-height: 1.63;
-    letter-spacing: .05vh;
-}
-.footer-info.style2 p span {
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.footer-title {
-    color: #6c1447;
-    font-size: 2.6vh;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .02vh;
-    font-weight: 800;
-    margin: 0 0 2.5vh 0;
-}
-.footer-menu2 a {
-    display: block;
-    font-size: 1.8vh;
-    font-weight: 600;
-    color:#6c1447;
-    letter-spacing: .04vh;
-    text-transform: capitalize;
-    margin: 0 0 0.5vh 0;
-}
-.footer-layout2 a:hover{
-    color:#412e41;
-    text-decoration: underline;
-}
-.footer-copyright.style2 {
-    background-color: #d5c8b7;
-    border-top: 0;
-    color:#6c1447;
-    padding: 4.0vh 1.5vh;
-    text-align: center;
-}
-.footer-copyright {
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 1.8vh;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .04vh;
-    color: #6c1447;
-    padding: 4.0vh 1.5vh;
-    border-top: 0.1vh solid rgba(165, 101, 101, 0.1);
-  
-}
-.footer-layout2 a{
-    text-decoration: none;
+.vs-btn:hover{
+    background-image: radial-gradient(#7d1550, #d5c8b7);
 }
