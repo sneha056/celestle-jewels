@@ -215,6 +215,9 @@ ul {
 .main-menu>ul>li {
     margin: 0 2.4vh;
 }
+.wish-cart a{
+    margin: auto 1vh;
+}
 .main-menu ul.sub-menu {
     padding: 1.8vh 2.0vh;
     left: -2.7vh;
@@ -286,6 +289,16 @@ ul {
 }
 .sub-menu li a{
     color:black;
+}
+#gold-price-btn button{
+    background-color: #78064c;
+    padding: 1.0vh;
+    margin-top: 21px;
+    color: white;
+    border: 2px solid #78064c;
+    border-color: #78064c;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 .header-search input {
     flex: 1;

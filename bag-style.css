@@ -84,6 +84,7 @@ body {
 }
 .space, .space-top {
     padding-top: 120px;
+    background-color: #7d1550;
 }
 .space-extra, .space-extra-bottom {
     padding-bottom: calc(120px - 30px);
@@ -92,9 +93,9 @@ body {
     position: relative;
     border: #fff0;
     padding: 15px 25px;
-    background-color:#171b21;
+    background-color:#d5c8b7;
     margin-bottom: 10px;
-    color:  #9c9b9b;
+    color:  black;
     letter-spacing: .5px;
     text-transform: capitalize;
     font-weight: 600;
@@ -104,19 +105,18 @@ body {
     content: "\f06a";
     font-weight: 900;
     margin-right: 10px;
-    color: red;
 }
 .cart_table {
-    border: 1px solid #101318;
+    border: 1px solid #7d1550;
     margin-bottom: 45px;
-    background-color: #171b21;
+    background-color: #d5c8b7;
 }
 table {
     margin: 0 0 1.5em;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #7d1550;
 }
 .cart_table thead th {
     border: none !important;
@@ -125,16 +125,16 @@ table {
     font-weight: 700;
     padding: 26.75px 15px;
     margin-bottom: 10px;
-    color: #9c9b9b;
+    color: black;
     letter-spacing: .5px;
     text-transform: capitalize;
     font-weight: 600;
     line-height: 30px;
 }
 .cart_table td {
-    border: 1px solid #101318;
-    border-bottom: 1px solid #101318;
-    color: #9c9b9b;
+    border: 1px solid #7d1550;
+    border-bottom: 1px solid #7d1550;
+    color: black;
     font-weight: 600;
     padding: 20px 10px;
     position: relative;
@@ -153,17 +153,17 @@ table {
 .quantity.style2 .qty-btn {
     width: 35px;
     height: 30px;
-    background-color: #101318;
+    background-color: #d5c8b7;
     border: 0;
     border-radius: 0;
-    color: white;
+    color: #7d1550;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
 .quantity .qty-btn {
-    background: #fff0;
+    background-color: #7d1550;
     border: 0;
     line-height: 1;
     display: inline-flex;
@@ -176,7 +176,7 @@ table {
 }
 .cart_table .qty-input {
     vertical-align: middle;
-    border: 1px solid #101318;
+    border: 1px solid #7d1550;
     font-size: 14px;
     text-align: center;
     color: white;
@@ -187,6 +187,7 @@ table {
     min-width: 70px;
     width: 70px;
     min-height: 50px;
+    background-color: #7d1550;
 }
 
 .quantity input {
@@ -197,10 +198,10 @@ table {
     border-radius: 0;
     min-width: 114px;
     min-height: 62px;
-    background-color: #15191f;    ;
+    background-color: #15191f;    
 }
 .cart_table .remove {
-    color: red;
+    color: #7d1550;
     font-size: 18px;
 }
 .cart_table .cart-actions {
@@ -211,7 +212,7 @@ table {
 .cart_table td {
     border: 1px solid #101318;
     border-bottom: 1px solid #101318;
-    color: #9c9b9b;
+    color: black;
     font-weight: 600;
     padding: 20px 10px;
     position: relative;
@@ -219,26 +220,25 @@ table {
     text-align: center;
 }
 .summary-title {
-    color: white;
+    color: black;
 }
 .cart_totals {
-    border: 1px solid #101318;
+    border: 1px solid #d5c8b7;
 }
 .cart_totals th:first-child, .cart_totals td:first-child {
     width: 45%;
-    background-color: #171b21;
-    color: white;
+    background-color: #d5c8b7;
+    color: black;
     letter-spacing: .5px;
     text-transform: capitalize;
     font-weight: 600;
     line-height: 30px;
-    font-family: #4a4949;
 }
 .cart_totals th, .cart_totals td {
     vertical-align: top;
     padding: 20px 20px;
     border: none;
-    border-bottom: 1px solid #101318;
+    border-bottom: 1px solid #d5c8b7;
     font-size: 14px;
     color: white;
     width: 55%;
@@ -269,7 +269,7 @@ input[type=radio] {
 select, .form-control, .form-select, textarea {
     border-radius: 0;
     width: 100%;
-    background-color: #101318;
+    background-color: #d5c8b7;
     border-color: #0b0e12;
     color: white;
     font-size: 14px;
@@ -296,7 +296,7 @@ select, .form-control, .form-select, textarea {
 .cart_totals .shipping-calculator-button {
     display: inline-block;
     border-bottom: 1px solid;
-    color: white;
+    color: black;
     font-weight: 700;
 }
 .shipping-calculator-form .form-select, .shipping-calculator-form .form-control {
@@ -319,7 +319,7 @@ select, .form-control, .form-select, textarea {
 }
 p {
     margin: 0 0 18px 0;
-    color: #4a4949;
+    color: black;
     line-height: 1.63;
     letter-spacing: .5px;
 }
@@ -327,20 +327,22 @@ p {
     position: relative;
     display: inline-flex;
     align-items: center;
+    border:0.5px solid #d5c8b7;
     justify-content: center;
-    border: none;
     text-transform: uppercase;
     text-align: center;
-    background-color: red;
+    background-image: radial-gradient(#d5c8b7, #7d1550);
     color: white;
     font-size: 15px;
     font-weight: 600;
     line-height: 1;
     padding: 19px 45px;
-    border-radius: 0;
     z-index: 1;
     overflow: hidden;
     letter-spacing: .1px;
+}
+.vs-btn:hover{
+    background-image: radial-gradient(#7d1550, #d5c8b7);
 }
 .vs-btn-a{
     text-decoration: none;

@@ -27,48 +27,103 @@
         </div>
     </div>
     <div class="category-area">
-    <div class="main-category">
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
+        <div class="main-category ">
+            <div class="product fade-in-up" style="animation-delay: 0.1s;">
+                <div class="product-img"><img class="image" src="images/product-1-1.jpg"></div>
+                <h3 class="product-title">Rani Har<span style="font-size: 18px;">(18 kart)</span></h3>
+                <span class="product-price">₹ 330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.2s;">
+                <div class="product-img"><img class="image" src="images/earing2.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.3s;">
+                <div class="product-img"><img class="image" src="images/earing3.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.4s;">
+                <div class="product-img"><img class="image" src="images/earing4.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.5s;">
+                <div class="product-img"><img class="image" src="images/earing5.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.6s;">
+                <div class="product-img"><img class="image" src="images/earing6.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.7s;">
+                <div class="product-img"><img class="image" src="images/earing7.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
+            <div class="product fade-in-up" style="animation-delay: 0.8s;">
+                <div class="product-img"><img class="image" src="images/earing8.jpeg"></div>
+                <h3 class="product-title">Rani Har</h3>
+                <span class="product-price">330</span>
+                <div class="btn">
+                    <a href="cart.html"><button>Cart</button></a>
+                    <a href="cart-style.css"><button>Bag</button></a>
+                </div>
+            </div>
         </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-        <div class="product">
-            <div class="product-img"><img class="image" src="product-1-1.jpg"></div>
-            <h3 class="product-title">Rani Har</h3>
-            <span class="product-price">330</span>
-        </div>
-    </div>
     </div>
     <script src="java script/navbar.js"></script>
-   
-
     <script src="java script/footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = document.querySelectorAll('.product');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            products.forEach(product => {
+                observer.observe(product);
+            });
+        });
+    </script>
 </body>
 
 </html>

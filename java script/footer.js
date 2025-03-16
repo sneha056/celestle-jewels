@@ -17,7 +17,7 @@ function generateFooter() {
               <p><span>Address :</span> 966 munich Expressway<br>
                 Sue 700 Germany, TX 7859</p>
             </div>
-            <a href="cart.html"><img src="payments.png" alt="payments"></a>
+            <a href="bag.html"><img src="payments.png" alt="payments"></a>
           </div>
           <div class="col-lg-2">
             <div class="footer-widget">
@@ -34,9 +34,9 @@ function generateFooter() {
             <div class="footer-widget">
               <h3 class="footer-title">Useful Links</h3>
               <div class="footer-menu2">
-                <a href="Alljewellery.html">Wishlist</a>
-                <a href="cart.html">Bag</a>
-                <a href="about.html">Help</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="bag.html">Bag</a>
+                <a href="contact.html">Help</a>
               </div>
             </div>
           </div>
