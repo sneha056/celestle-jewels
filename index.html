@@ -17,6 +17,13 @@
 </head>
 
 <body>
+  <!-- Loader (Full Screen) -->
+  <div id="loader-container">
+    <div class="loader">
+        <img src="images/Celeste Jewels logo.png" />
+    </div>
+  </div>
+  <script src="java script/loader.js"></script>
 
   <!-- nav bar -->
   <div class="sticky-wrapper" id="navbar">
@@ -181,10 +188,9 @@
               </div>
             </div>
             <h3 class="product-title" style="color: white;">
-              Flower Pendant
+             Necklace
             </h3>
             <span class="product-price">
-              <span class="product-price__number">₹355.00</span>
               <a class="product-cart" href="bag.html">add to cart</a>
             </span>
             <div class="product-rate">
@@ -222,10 +228,9 @@
               </div>
             </div>
             <h3 class="product-title" style="color: white;">
-              Diamond Gold
+              Bahi
             </h3>
             <span class="product-price">
-              <span class="product-price__number">₹355.00</span>
               <a class="product-cart" href="bag.html">add to cart</a>
             </span>
             <div class="product-rate">
@@ -263,10 +268,8 @@
               </div>
             </div>
             <h3 class="product-title"style="color: white";>
-              Black Pendant
-            </h3>
+Earrings            </h3>
             <span class="product-price">
-              <span class="product-price__number">₹355.00</span>
               <a class="product-cart" href="bag.html">add to cart</a>
             </span>
             <div class="product-rate">
@@ -282,7 +285,7 @@
           style="visibility: visible; animation-delay: 0.85s; animation-name: fadeInUp;">
           <div class="product-style1 fade-in-up" style="animation-delay: 0s;">
             <div class="product-img">
-              <img class="img" src="images/product-1-4.jpeg" alt="product">
+              <img class="img" src="images/ring image 3.jpeg" alt="product">
               <div class="product-action">
                 <button class="product-action__btn">
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,10 +307,9 @@
               </div>
             </div>
             <h3 class="product-title" style="color: white;">
-              wedding ring
+            Rings
             </h3>
             <span class="product-price">
-              <span class="product-price__number">₹355.00</span>
               <a class="product-cart" href="bag.html">add to cart</a>
             </span>
             <div class="product-rate">
@@ -678,29 +680,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.scrollTop = 0;
   }
   </script>
-  <script>
-    var myHeaders = new Headers();
-    myHeaders.append("x-access-token", "goldapi-1lpfdusm88m57ca-i");
-    myHeaders.append("Content-Type", "application/json");
+<script src="java script/gold.js"></script>
   
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    };
-  
-    fetch("https://www.goldapi.io/api/XAU/INR", requestOptions)
-      .then(response => response.json()) // Change response.text() to response.json()
-      .then(result => {
-        const price24k = (result.price_gram_24k*10+5000).toFixed(0);
-        const price22k = (result.price_gram_22k*10+5000).toFixed(0);
-        const price18k = (result.price_gram_18k*10+5000).toFixed(0);
-        document.getElementById('gold-price-24k').innerHTML = `24k ${price24k}`;
-        document.getElementById('gold-price-22k').innerHTML = `22k ${price22k}`;
-        document.getElementById('gold-price-18k').innerHTML = `18k ${price18k}`;
-      })
-      .catch(error => console.log('error', error));
-  </script>
+ 
 </body>
 
 </html>
