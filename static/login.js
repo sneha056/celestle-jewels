@@ -29,6 +29,6 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('An error occurred. Please try again.');  // Show generic error message
+        alert('This account is not registerd');  // Show generic error message
     });
 });

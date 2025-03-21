@@ -36,7 +36,7 @@
   <section class="space space-extra-bottom" style="background-color: #7d1550;">
     <div class="container">
       <div class="woocommerce-notices-wrapper">
-        <div class="woocommerce-message">Shipping costs updated.</div>
+        <div class="woocommerce-message" id="wishlist-message">Your wishlist items</div>
       </div>
       <form action="#" class="woocommerce-cart-form">
         <table class="cart_table">
@@ -48,47 +48,33 @@
               <th class="cart-col-quantity">Quantity</th>
               <th class="cart-col-total">Total</th>
               <th class="cart-col-remove">Remove</th>
+              <th class="cart-col-bag">Purchase</th>
+
             </tr>
           </thead>
-          <tbody>
-            <tr class="cart_item">
-              <td data-title="Product">
-                <a class="cart-productimage" href="shop.html">
-                  <img width="100" height="95" src="assets/img/shop/product-1-1.png" alt="Image">
-                </a>
-              </td>
-              <td data-title="Name">
-                <a class="cart-productname" href="shop.html">BMW Car Lexus GS
-                  Steering...
-                </a>
-              </td>
-              <td data-title="Price"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
-              <td data-title="Quantity">
-                <div class="quantity style2">
-                  <div class="quantity__field quantity-container">
-                    <button class="quantity-minus qty-btn">
-                      <i class="fa-solid fa-minus fal"></i>
-                    </button>
-                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="quantity"
-                      value="01" title="Qty">
-                    <button class="quantity-plus qty-btn">
-                      <i class="fa-solid fa-plus fal"></i>
-                    </button>
-                  </div>
-                </div>
-              </td>
-              <td data-title="Total"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
-              <td data-title="Remove"><a href="#" class="remove"><i class="fa-solid fa-trash fal"></i></a></td>
-            </tr>
+          <tbody id="wishlist-items">
+            <!-- Dynamic content will be inserted here -->
           </tbody>
         </table>
       </form>
     </div>
   </section>
   <script src="java script/navbar.js"></script>
-
-
+  <script src="java script/wishlist.js"></script> <!-- Added wishlist functionality script -->
   <script src="java script/footer.js"></script>
-</body>
 
+  <!-- Add this script for quantity adjustments -->
+  <script>
+    document.addEventListener('click', function(e) {
+      const qtyInput = e.target.closest('.quantity')?.querySelector('.qty-input');
+      if (e.target.classList.contains('quantity-plus')) {
+        qtyInput.value = parseInt(qtyInput.value) + 1;
+      } else if (e.target.classList.contains('quantity-minus')) {
+        if (parseInt(qtyInput.value) > 1) {
+          qtyInput.value = parseInt(qtyInput.value) - 1;
+        }
+      }
+    });
+  </script>
+</body>
 </html>

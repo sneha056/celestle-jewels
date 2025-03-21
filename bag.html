@@ -35,45 +35,18 @@
       <form action="#" class="woocommerce-cart-form">
         <table class="cart_table">
           <thead>
-            <tr>
+            <tbody id="bagItems">
+
               <th class="cart-col-image">Image</th>
               <th class="cart-col-productname">Product Name</th>
               <th class="cart-col-price">Price</th>
               <th class="cart-col-quantity">Quantity</th>
               <th class="cart-col-total">Total</th>
               <th class="cart-col-remove">Remove</th>
-            </tr>
+            </tbody>
           </thead>
           <tbody>
-            <tr class="cart_item">
-              <td data-title="Product">
-                <a class="cart-productimage" href="shop.html">
-                  <img width="100" height="95" src="assets/img/shop/product-1-1.png" alt="Image">
-                </a>
-              </td>
-              <td data-title="Name">
-                <a class="cart-productname" href="shop.html">BMW Car Lexus GS
-                  Steering...
-                </a>
-              </td>
-              <td data-title="Price"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
-              <td data-title="Quantity">
-                <div class="quantity style2">
-                  <div class="quantity__field quantity-container">
-                    <button class="quantity-minus qty-btn">
-                      <i class="fa-solid fa-minus fal"></i>
-                    </button>
-                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="quantity"
-                      value="01" title="Qty">
-                    <button class="quantity-plus qty-btn">
-                      <i class="fa-solid fa-plus fal"></i>
-                    </button>
-                  </div>
-                </div>
-              </td>
-              <td data-title="Total"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
-              <td data-title="Remove"><a href="#" class="remove"><i class="fa-solid fa-trash fal"></i></a></td>
-            </tr>
+            
           </tbody>
         </table>
       </form>
@@ -152,6 +125,70 @@
 
 
   <script src="java script/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const bag = JSON.parse(localStorage.getItem('bag')) || [];
+        const container = document.getElementById('bagItems');
+        
+        bag.forEach((item, index) => {
+            const tr = document.createElement('tr');
+            tr.className = 'cart_item';
+            tr.innerHTML = `
+                <td data-title="Product">
+                    <a class="cart-productimage" href="#">
+                        <img width="100" height="95" src="${item.image}" alt="${item.name}">
+                    </a>
+                </td>
+                <td data-title="Name">
+                    <a class="cart-productname" href="#">${item.name}</a>
+                </td>
+                <td data-title="Price"><span class="amount"><bdi>${item.price}</bdi></span></td>
+                <td data-title="Quantity">
+                    <div class="quantity style2">
+                        <div class="quantity__field quantity-container">
+                            <button class="quantity-minus qty-btn" onclick="updateQuantity(${index}, -1)">
+                                <i class="fa-solid fa-minus fal"></i>
+                            </button>
+                            <input type="number" class="qty-input" value="1" min="1">
+                            <button class="quantity-plus qty-btn" onclick="updateQuantity(${index}, 1)">
+                                <i class="fa-solid fa-plus fal"></i>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+                <td data-title="Total"><span class="amount"><bdi>${item.price}</bdi></span></td>
+                <td data-title="Remove"><a href="#" class="remove" onclick="removeItem(${index})"><i class="fa-solid fa-trash fal"></i></a></td>
+            `;
+            container.appendChild(tr);
+        });
+        
+        updateTotals();
+    });
+    
+    function updateQuantity(index, change) {
+        const bag = JSON.parse(localStorage.getItem('bag'));
+        const input = document.querySelectorAll('.qty-input')[index];
+        let newValue = parseInt(input.value) + change;
+        
+        if(newValue < 1) newValue = 1;
+        input.value = newValue;
+        
+        // Update price calculations
+        updateTotals();
+    }
+    
+    function removeItem(index) {
+        const bag = JSON.parse(localStorage.getItem('bag'));
+        bag.splice(index, 1);
+        localStorage.setItem('bag', JSON.stringify(bag));
+        location.reload();
+    }
+    
+    function updateTotals() {
+        // Add your total calculation logic here
+    }
+    </script>
+    
 </body>
 
 </html>

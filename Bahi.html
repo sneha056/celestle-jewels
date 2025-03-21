@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="categories-style.css">
+    <script src="java script/wishlist.js"></script>
+
     <title>Bahi</title>
 </head>
 
@@ -40,10 +42,10 @@
                 <h3 class="product-title">Jadau Bahi <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 
                 <h5 class="product-gram">30grm</h5>
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.2s;">
@@ -51,10 +53,10 @@
                 <h3 class="product-title">Jadau Flower Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">22grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.3s;">
@@ -62,10 +64,10 @@
                 <h3 class="product-title">Jadau Petal Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">25grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.4s;">
@@ -73,10 +75,10 @@
                 <h3 class="product-title">Peacock Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">30grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.5s;">
@@ -84,10 +86,10 @@
                 <h3 class="product-title">Jadau Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">29grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.6s;">
@@ -95,10 +97,10 @@
                 <h3 class="product-title">Jadau Petal Bahi <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">27grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.7s;">
@@ -106,10 +108,10 @@
                 <h3 class="product-title">Jadau Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">28grm</h5>
 
-                <span class="product-price">LOADING..</span>
+                <span class="product-price">₹0</span>
                 <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
             <div class="product fade-in-up" style="animation-delay: 0.8s;">
@@ -117,10 +119,10 @@
                 <h3 class="product-title">Jadau Flower Bahi  <br><span style="font-size: 18px;">(18 kart)</span></h3>
                 <h5 class="product-gram">27grm</h5>
 
-                <span class="product-price">LOADING..</span>
-                <div class="btn">
-                    <a href="cart.html"><button>Cart</button></a>
-                    <a href="cart-style.css"><button>Bag</button></a>
+                <span class="product-price">₹0</span>
+                 <div class="btn">
+                    <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+                    <button class="bag-btn" onclick="addToBag(this.closest('.product'))">Bag</button>
                 </div>
             </div>
         </div>
@@ -149,6 +151,62 @@
             });
         });
     </script>
+    <script>// Initialize wishlist array in localStorage if not exists
+        if (!localStorage.getItem('wishlist')) {
+            localStorage.setItem('wishlist', JSON.stringify([]));
+        }
+        
+        // Add to wishlist function
+        function addToWishlist(productElement) {
+            const product = {
+                id: Date.now(), // Unique ID based on timestamp
+                name: productElement.querySelector('.product-title').innerText,
+                weight: productElement.querySelector('.product-gram').innerText,
+                price: productElement.querySelector('.product-price').innerText,
+                image: productElement.querySelector('.product-img img').src,
+                quantity: 1
+            };
+        
+            const wishlist = JSON.parse(localStorage.getItem('wishlist'));
+            
+            // Check if product already exists
+            const exists = wishlist.some(item => item.name === product.name);
+            
+            if (!exists) {
+                wishlist.push(product);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                alert('Added to wishlist!');
+                // Optional: Redirect to wishlist page
+                // window.location.href = 'wishlist.html';
+            } else {
+                alert('This product is already in your wishlist!');
+            }
+        }
+        
+        // Update the last product's button (which was linking to cart.html)
+        <div class="btn">
+            <button class="wishlist-btn" onclick="addToWishlist(this.closest('.product'))">Wishlist</button>
+            <button class="bag-btn">Bag</button>
+        </div>
+        </script>
+        <script>
+            function addToBag(productElement) {
+                const product = {
+                    name: productElement.querySelector('.product-title').innerText,
+                    price: productElement.querySelector('.product-price').innerText,
+                    image: productElement.querySelector('.image').src,
+                    weight: productElement.querySelector('.product-gram').innerText
+                };
+            
+                // Get existing bag items or create new array
+                const bag = JSON.parse(localStorage.getItem('bag')) || [];
+                bag.push(product);
+                localStorage.setItem('bag', JSON.stringify(bag));
+                
+                window.location.href = 'bag.html';
+            }
+            </script>
+            
 </body>
 
 </html>
