@@ -6,58 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <title>terms and conditions</title>
     <style>
+        /* Loader Container (Full Screen) */
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/banner-background.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Loader (Spinning Border) */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid  #7d1550; /* purple*/
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spinloader 2s linear infinite;
+}
+
+/* Rotating Logo */
+.loader img {
+    height: 90px;
+    width: 90px;
+    animation: spinlogo 2s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes spinloader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinlogo {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
         .customizeContentPage {
-    font-size: 14px;
-    margin-left: 0 !important;
-}
-.influencer-border {
-    border: 1px solid #000;
-    padding: 10px 20px 20px !important;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
-fieldset {
-    min-width: 0;
-    margin: 0;
-    
-}
-.influencer-border legend {
-    display: inline-block;
-    width: auto;
-    border-bottom: 0;
-    margin-left: 20px;
-    padding: 0 10px;
-    font-size: 23px;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.customizeContentPage #staticContainerId ul {
-    padding-left: 40px !important;
-    
-}
-.customizeContentPage #staticContainerId .termconditionslist li {
-    list-style: decimal !important;
-    font-size: 14px;
-    font-family: 'Noto Serif', serif;
-    margin-bottom: 10px;
-}
+            font-size: 14px;
+            margin-left: 0 !important;
+        }
+
+        .influencer-border {
+            border: 1px solid #000;
+            padding: 10px 20px 20px !important;
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+
+        fieldset {
+            min-width: 0;
+            margin: 0;
+
+        }
+
+        .influencer-border legend {
+            display: inline-block;
+            width: auto;
+            border-bottom: 0;
+            margin-left: 20px;
+            padding: 0 10px;
+            font-size: 23px;
+            color: #000;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .customizeContentPage #staticContainerId ul {
+            padding-left: 40px !important;
+
+        }
+
+        .customizeContentPage #staticContainerId .termconditionslist li {
+            list-style: decimal !important;
+            font-size: 14px;
+            font-family: 'Noto Serif', serif;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
 <body>
-      <!-- Loader (Full Screen) -->
-  <div id="loader-container">
-    <div class="loader">
-        <img src="images/Celeste Jewels logo.png" />
+    <!-- Loader (Full Screen) -->
+    <div id="loader-container">
+        <div class="loader">
+            <img src="images/Celeste Jewels logo.png">
+        </div>
     </div>
-  </div>
-  <script src="java script/loader.js"></script>
+    <script src="java script/loader.js"></script>
     <section class="customizeContentPage">
         <div class="container">
-            <div class="col-lg-12 col-md-12 col-xs-12 mobilePadding0" id="staticContainerId" style="background-color: #fff; margin-left: 10%; margin-right:10%";>
+            <div class="col-lg-12 col-md-12 col-xs-12 mobilePadding0" id="staticContainerId"
+                style="background-color: #fff; margin-right:10%" ;>
                 <fieldset class="influencer-border">
                     <legend class="scheduler-border">Terms and Conditions : </legend>
                     <ul class="termconditionslist">
@@ -97,9 +148,27 @@ fieldset {
         </div>
     </section>
     <script src="java script/navbar.js"></script>
-   
+    <script src="java script/footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = document.querySelectorAll('.product');
 
-<script src="java script/footer.js"></script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            products.forEach(product => {
+                observer.observe(product);
+            });
+        });
+    </script>
 </body>
 
 </html>

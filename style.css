@@ -270,7 +270,7 @@ ul {
 
 .main-menu ul.sub-menu {
     padding: 1.8vh 2.0vh;
-    left: -2.7vh;
+    /* left: -2.7vh; */
 }
 .main-menu ul.sub-menu{
     position: absolute;
@@ -299,6 +299,20 @@ ul {
     border-color: #78064c;
     border-radius: 5px;
     margin-right: 20px;
+}
+#register-login-btn button{
+    background-color: #78064c;
+    padding: 1.0vh;
+    margin-top: 21px;
+    color: white;
+    border: 2px solid #78064c;
+    border-color: #78064c;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+#register-login-btn button:hover{
+    background-color: #78064cda;
+    
 }
 .header-search input {
     flex: 1;
@@ -449,6 +463,7 @@ img, svg {
     margin-top: calc(-1* 0);
     margin-right: calc(-.5* 1.5rem);
     margin-left: calc(-.5* 1.5rem);
+    padding-left: 25px;
 }
 .hero-main .hero-title {
     font-size: 12.0vh;
